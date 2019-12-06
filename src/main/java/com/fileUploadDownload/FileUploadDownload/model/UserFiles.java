@@ -3,6 +3,8 @@ package com.fileUploadDownload.FileUploadDownload.model;
 import javax.persistence.*;
 import java.io.Serializable;
 
+
+//url : https://www.youtube.com/watch?v=XZdfUqZ0CG4
 @Entity
 @Table(name = "user_files")
 public class UserFiles implements Serializable {
