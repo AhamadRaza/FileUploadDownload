@@ -68,8 +68,8 @@
             <a th:href="@{'/downloadfilesaszip/'+${user.id}}" style="float:right; font-size:32px;"><i class="fa fa-file-archive-o" aria-hidden="true" ></i></a>
             <div class="form-group">
             <span th:each="file, itr : ${userfiles}" class="imagecontainer" th:id="'imageindex'+${itr.index}">
-            <img th:src="@{'/images/'+${file.modifiedFileName}}" style="width:80px; height:80px; border-radius:50%; margin-left:10px;" class="image" th:if="${file.fileExtension !='pdf' and file.fileExtension !='xlxs'}">
-             <img th:src="@{'/img/pdf.png'}" style="width:80px; height:80px; border-radius: 50%;margin-left:10px;" class="image" th:if="${file.fileExtension =='pdf'}">
+            <img th:src="@{'/images/'+${file.modifiedFileName}}" style="width:80px; height:80px; border-radius:50%; margin-left:10px;" class="image" th:if="${file.fileExtension !='pdf' and file.fileExtension !='xlsx'}">
+             <img th:src="@{'/img/pdf.png'}" style="width:80px; height:80px; border-radius:50%;margin-left:10px;" class="image" th:if="${file.fileExtension =='pdf'}">
              <img th:src="@{'/img/excel.png'}" style="width:80px; height:80px; border-radius:50%; margin-left:10px;" class="image" th:if="${file.fileExtension =='xls' or file.fileExtension =='xlsx'}">
                 <span class="overlay">
                 <a th:href="@{'/downloadfile/'+${file.fileName}+'/'+${file.modifiedFileName}}" class="icon" title="image download">
