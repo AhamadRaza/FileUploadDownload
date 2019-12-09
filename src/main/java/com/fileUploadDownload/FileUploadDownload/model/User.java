@@ -12,7 +12,7 @@ import java.util.List;
 @Table(name = "user")
 public class User implements Serializable{
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
     @Column(name = "first_name")

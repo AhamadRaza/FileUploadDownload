@@ -9,7 +9,7 @@ import java.io.Serializable;
 @Table(name = "user_files")
 public class UserFiles implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
     @Column(name = "file_name")

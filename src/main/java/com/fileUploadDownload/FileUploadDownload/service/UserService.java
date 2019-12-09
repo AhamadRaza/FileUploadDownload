@@ -11,4 +11,6 @@ public interface UserService {
     public User findById(Long userId);
     public List<UserFiles> findfilesByUserId(Long userId);
     public User update(User user);
+    void deleteFilesByUserId(Long userId);
+    void deleteUser(Long userId);
 }
