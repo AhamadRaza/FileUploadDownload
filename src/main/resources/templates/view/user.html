@@ -74,11 +74,11 @@
     </div>
     <div class="form-group">
         <span th:each="file, itr : ${userfiles}" class="imagecontainer" th:id="'imageindex'+${itr.index}">
-        <img th:src="@{'/images/'+${file.modifiedFileName}}" style="width:80px; height:80px; border-radius:50%; margin-left: 10px" class="image" th:if="${file.fileExtension !='pdf' and file.fileExtension !='xlsx'}">
+        <img th:src="@{'/images/'+${file.modifiedFileName}}" style="width:80px; height:80px; border-radius:50%; margin-left: 10px" class="image" th:if="${file.fileExtension !='pdf' and file.fileExtension !='xls' and file.fileExtension !='xlsx'}">
         <img th:src="@{'/img/pdf.png'}" style="width:80px; height:80px; border-radius:50%; margin-left:10px" class="image" th:if="${file.fileExtension =='pdf'}">
         <img th:src="@{'/img/excel.png'}" style="width:80px; height:80px; border-radius:50%; margin-left:10px" class="image" th:if="${file.fileExtension =='xls' or file.fileExtension =='xlsx'}">
             <span class="overlay">
-                <a href="#" class="icon image-confirm-delete" title="image delete" th:attr="data-id=${itr.index}, data-name=${file.modifiedFileName}">
+                <a href="#" class="icon image-confirm-delete" title="delete image" th:attr="data-id=${itr.index}, data-name=${file.modifiedFileName}">
                     <i class="fa fa-trash" style="color: red;"></i>
                 </a>
             </span>
